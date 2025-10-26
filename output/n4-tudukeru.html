@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n4-tudukeru</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n4-yasui.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n4-tsumorida.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動ます形＋続ける
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  继续…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  動ます形に接続して動作の継続・持続を表します。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　以前もらったペンを今でも使い
+  <span class="bold">
+   続けて
+  </span>
+  いる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_758_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我现在还在继续用以前收到的钢笔。
+  </span>
+  <br/>
+  <span class="gray">
+   I’m still using the pen I received before.
+  </span>
+  <br/>
+  （２）　努力し
+  <span class="bold">
+   続ける
+  </span>
+  と必ず花開く。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_758_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   坚持努力就会成功。
+  </span>
+  <br/>
+  <span class="gray">
+   If you continue to make efforts, you will surely blossom.
+  </span>
+  <br/>
+  （３）　夢の中で見知らぬ男に追われ
+  <span class="bold">
+   続け
+  </span>
+  、起きた時には汗だくだった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_758_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   在梦里不停被陌生男子追赶，醒来时满身大汗。
+  </span>
+  <br/>
+  <span class="gray">
+   In my dream, I was chased by an unfamiliar man, and when I woke up, I was covered in sweat.
+  </span>
+  <br/>
+  （４）　世界人口が増え
+  <span class="bold">
+   続けて
+  </span>
+  いる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_758_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   世界人口持续增长。
+  </span>
+  <br/>
+  <span class="gray">
+   The world population continues to increase.
+  </span>
+  <br/>
+  （５）　画面を見
+  <span class="bold">
+   続ける
+  </span>
+  と目に悪い。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_758_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   持续看画面的话对眼睛不好。
+  </span>
+  <br/>
+  <span class="gray">
+   Staring at the screen continuously is bad for your eyes.
+  </span>
+  <br/>
+  （６）　１時間待ち
+  <span class="bold">
+   続けた
+  </span>
+  けど、結局彼は来なかった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_758_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   持续等了一个小时，结果他还是没来。
+  </span>
+  <br/>
+  <span class="gray">
+   I waited for an hour, but in the end, he didn’t come.
+  </span>
+  <br/>
+  （７）　定年までこの仕事をし
+  <span class="bold">
+   続ける
+  </span>
+  つもりはない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_758_07.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我不打算在退休前继续这份工作。
+  </span>
+  <br/>
+  <span class="gray">
+   I don’t intend to continue this job until retirement.
+  </span>
+  <br/>
+  （８）　昨晩から雨が降り
+  <span class="bold">
+   続いて
+  </span>
+  いる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_758_08.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   从昨晚开始一直在下雨。
+  </span>
+  <br/>
+  <span class="gray">
+   It has been raining continuously since last night.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

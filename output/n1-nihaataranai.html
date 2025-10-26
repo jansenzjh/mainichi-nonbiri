@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n1-nihaataranai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n1-nihamurigaaru.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n1-niatte.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動詞辞書形＋に（は）当たらない
+  <br/>
+  名詞＋に（は）当たらない
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  不必…
+  <br/>
+  用不着…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  相手の過剰な反応に対して「そこまで～する必要はない」と進言したり、諭すようなときに用いる文型です。特に感情を表す単語に接続されます。前項には「～からといって」「～だから／なので」などを伴って原因や理由が述べられることが多いです。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　多少ミスしたくらいでは心配
+  <span class="bold">
+   にはあたらない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_253_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   稍微失误一点用不着担心。
+  </span>
+  <br/>
+  <span class="gray">
+   There’s no need to worry over a minor mistake.
+  </span>
+  <br/>
+  （２）　彼はバカげたことを言っているが、いつものことなので驚く
+  <span class="bold">
+   にはあたらない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_253_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   他说的是些愚蠢的话，那是常有的事情，所以用不着吃惊。
+  </span>
+  <br/>
+  <span class="gray">
+   He’s saying something foolish, but it’s nothing surprising since it’s typical of him.
+  </span>
+  <br/>
+  （３）　誰がやっても難しいのだから、逃げ出してしまったからといって非難する
+  <span class="bold">
+   にあたらない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_253_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   无论谁做都很难，所以就算逃走了也没必要责怪。
+  </span>
+  <br/>
+  <span class="gray">
+   Since it’s difficult no matter who does it, there’s no need to criticize someone for running away.
+  </span>
+  <br/>
+  （４）　叱られたからといってそこまで悲しむ
+  <span class="bold">
+   にはあたらない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_253_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   就算被训斥了也没必要那么伤心。
+  </span>
+  <br/>
+  <span class="gray">
+   There’s no need to be so sad just because you were scolded.
+  </span>
+  <br/>
+  （５）　まだ挽回できるチャンスはあるし、そこまで悲観する
+  <span class="bold">
+   にはあたらない
+  </span>
+  はずだ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_253_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   还会有挽回的机会，应该不会悲观到那种程度。
+  </span>
+  <br/>
+  <span class="gray">
+   There’s still a chance to recover, so there’s no need to be so pessimistic.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n1-nihaoyobanai/">
+   【Ｎ１文法】～には及ばない（およばない）
+  </a>
+  」
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n1-mademonai/">
+   【Ｎ１文法】～までもない／までもなく
+  </a>
+  」
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

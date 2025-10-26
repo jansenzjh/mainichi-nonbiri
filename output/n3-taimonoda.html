@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-taimonoda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-takirinai.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-tahazuda.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動ます形＋たいものだ
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  真想…啊
+  <br/>
+  ～したい
+  <br/>
+  ～してみたい
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  動ます形に接続して、そもそも実現不可能あるいは実現困難なことに対する強い願望や期待を表します。
+  <br/>
+  また、その願望は以前から長い時間抱いている場合が多いです。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　普通と言われる人生を送る人間なんて、一人としていやしない。いたらお目にかかり
+  <span class="bold">
+   たいものだ
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_617_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   没有一个人过着被称为普通的生活。如果有的话我还真想见识一下。
+  </span>
+  <br/>
+  <span class="gray">
+   There’s not a single person who wants to live a life considered ordinary. I’d love to meet someone like that if they exist.
+  </span>
+  <br/>
+  （２）　こんな寒いときはお布団被って二度寝し
+  <span class="bold">
+   たいものだ
+  </span>
+  ね。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_617_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   寒冷的天气就是要裹着被子睡个回笼觉啊。
+  </span>
+  <br/>
+  <span class="gray">
+   On such a cold day, I’d love to crawl under the covers and take a nap.
+  </span>
+  <br/>
+  （３）　休みの日くらいぐっすり寝て
+  <span class="bold">
+   たいもの
+  </span>
+  だ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_617_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   想像休息日那样好好睡一觉。
+  </span>
+  <br/>
+  <span class="gray">
+   On my days off, I really want to sleep soundly.
+  </span>
+  <br/>
+  （４）　いつでも人は、意思決定を先延ばしし
+  <span class="bold">
+   たいもの
+  </span>
+  だ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_617_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   人无论在什么时候都想推迟做出决策。
+  </span>
+  <br/>
+  <span class="gray">
+   People always want to postpone decision-making.
+  </span>
+  <br/>
+  （５）　彼とはできればこれからも仲良くしてい
+  <span class="bold">
+   たいもの
+  </span>
+  です。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_617_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   如果可以的话，今后也想和他友好相处。
+  </span>
+  <br/>
+  <span class="gray">
+   I hope to continue getting along well with him from now on.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <table>
+  <tr>
+   <th>
+    「ものだ」シリーズ
+   </th>
+   <th>
+    意味
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <a href="https://mainichi-nonbiri.com/grammar/n2-monoda/">
+     【Ｎ２文法】～ものだ
+    </a>
+   </td>
+   <td>
+    物事の本質を述べる
+    感情を強調する
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <a href="https://mainichi-nonbiri.com/grammar/n2-yokumomonoda/">
+     【Ｎ２文法】よくも～ものだ／よくも～
+    </a>
+   </td>
+   <td>
+    称賛や非難（皮肉）
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <a href="https://mainichi-nonbiri.com/grammar/n2-tamonoda/">
+     【Ｎ２文法】～たものだ
+    </a>
+   </td>
+   <td>
+    思い出を振り返る
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <a href="https://mainichi-nonbiri.com/grammar/n3-taimonoda/">
+     【Ｎ３文法】～たいものだ
+    </a>
+   </td>
+   <td>
+    強い願望と期待
+   </td>
+  </tr>
+ </table>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

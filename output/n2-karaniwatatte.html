@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n2-karaniwatatte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n2-karatoitte.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n2-karaniha.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋から＋名詞＋にわたって
+  <br/>
+  名詞＋から＋名詞＋にわたり
+  <br/>
+  名詞＋から＋名詞＋にわたる（＋名詞）
+  <br/>
+  名詞＋から＋名詞＋にわたった（＋名詞）
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  从…到…
+  <br/>
+  涉及…
+  <br/>
+  一直…
+  <br/>
+  ～から～まで
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  「～から～まで」と同じく時間や空間の範囲を表します。ただし、その範囲の起点と終点がはっきりしていて、現象が範囲全体に広がっているようなニュアンスを持っています。範囲は面状です。
+  <br/>
+  起点を述べる必要がなければ、「～から」を省略することができます。
+  <br/>
+  漢字は「渡って」を使います。
+  <br/>
+  「長年にわたって／長きにわたって」は長期間続くことを表す慣用表現です。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　親
+  <span class="bold">
+   から
+  </span>
+  子と世代
+  <span class="bold">
+   にわたって
+  </span>
+  生活保護の人々もいる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_357_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   有些人从父辈到孩子这一代都依靠生活保障。
+  </span>
+  <br/>
+  <span class="gray">
+   There are people receiving public assistance across generations, from parents to children.
+  </span>
+  <br/>
+  （２）　この研究は他の研究員らにより長年
+  <span class="bold">
+   に渡って
+  </span>
+  継続された。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_357_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   这个研究由其他研究员继续常年地研究。
+  </span>
+  <br/>
+  <span class="gray">
+   This research has been carried out by other researchers over many years.
+  </span>
+  <br/>
+  （３）　国道沿い２ｋｍ
+  <span class="bold">
+   にわたって
+  </span>
+  桜並木が続いている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_357_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   沿着国道2千米的范围内满是樱花树。
+  </span>
+  <br/>
+  <span class="gray">
+   There is a row of cherry trees stretching for 2 kilometers along the national highway.
+  </span>
+  <br/>
+  （４）　秋田県
+  <span class="bold">
+   から
+  </span>
+  新潟県の日本海側
+  <span class="bold">
+   にわたる
+  </span>
+  広い地域で大雪警報が出ている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_357_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   处于日本海一侧的从秋田县到新泻县的广大地域发出了大雪警报。
+  </span>
+  <br/>
+  <span class="gray">
+   A heavy snow warning has been issued for a wide area spanning from Akita Prefecture to the Japan Sea side of Niigata Prefecture.
+  </span>
+  <br/>
+  （５）　地震の影響でこの地区ほぼ全域が数週間
+  <span class="bold">
+   にわたって
+  </span>
+  断水した。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_357_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   因为地震的影响，这个地区几乎所有的地方都停水了数周。
+  </span>
+  <br/>
+  <span class="gray">
+   Due to the earthquake, water supply has been cut off in almost the entire district for several weeks.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-karanikakete/">
+   【Ｎ３文法】～から～にかけて／にかけ
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

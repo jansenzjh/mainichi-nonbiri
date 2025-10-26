@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-toiu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-toiuhododehanai.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-toitta.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  文の普通形＋という＋名詞
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  叫做…
+  <br/>
+  …的…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  話し手と聞き手のどちらか一方の理解が進んでいない場合に、その物事や人などを説明、定義することを表します。
+  <br/>
+  口語では「って」や「っていう」が用いられます。
+ </p>
+ <p>
+  「ＸというＹ」のとき、Ｙは上位語、Ｘは下位語です。両者は包摂関係にあります。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　佐藤さん
+  <span class="bold">
+   という
+  </span>
+  人から電話が来ていましたよ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_654_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   有个叫佐藤的人来过电话。
+  </span>
+  <br/>
+  <span class="gray">
+   There was a phone call from a person named Sato.
+  </span>
+  <br/>
+  （２）　来週この小説の冒頭部分を暗唱する
+  <span class="bold">
+   という
+  </span>
+  試験がある。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_654_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   下周有背诵这部小说的开头部分的考试。
+  </span>
+  <br/>
+  <span class="gray">
+   Next week, there is an exam to memorize the opening part of this novel.
+  </span>
+  <br/>
+  （３）　「来週試験がある
+  <span class="bold">
+   って
+  </span>
+  こと覚えてる？」
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_654_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   你记得下周有考试吗？
+  </span>
+  <br/>
+  <span class="gray">
+   “Do you remember that there’s an exam next week?”
+  </span>
+  <br/>
+  （４）　「この歌、何
+  <span class="bold">
+   という
+  </span>
+  人が歌ってるの？」
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_654_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   这首歌是什么人唱的。
+  </span>
+  <br/>
+  <span class="gray">
+   “Who is singing this song?”
+  </span>
+  <br/>
+  （５）　モンサンミッシェル
+  <span class="bold">
+   っていう
+  </span>
+  ところに一度は行ってみたい。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_654_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   想去圣米歇尔这个地方。
+  </span>
+  <br/>
+  <span class="gray">
+   I’d like to visit a place called Mont Saint-Michel at least once.
+  </span>
+  <br/>
+  （６）　今朝近くで女性が背後から襲われる
+  <span class="bold">
+   という
+  </span>
+  事件があったらしい。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_654_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   今天早上附近发生了女性被人从背后袭击的事件。
+  </span>
+  <br/>
+  <span class="gray">
+   This morning, there was an incident where a woman was attacked from behind nearby.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n2-toiu-2/">
+   【Ｎ２文法】～という
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

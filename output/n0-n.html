@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n0-n</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n0-naniyori.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n0-moshinai.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  一段動詞　→　ナイ形＋ん
+  <br/>
+  五段動詞　→　ナイ形＋ん
+  <br/>
+  サ変動詞　→　せん
+  <br/>
+  カ変動詞　→　来ん（こん）
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  ①…将…
+  <br/>
+  ②～吧
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  動詞の未然形に古語の助動詞「む」がついた音が撥音便を起こして「ん」となりました。これらの表現は現代でも残っていますが、古めかしい言い方なので特定のときにしか使われません。
+ </p>
+ <p>
+  意味は推量（～だろう）と意志（～しよう）の２つあります。
+  <br/>
+  絶対ではないですが、基本的には三人称主語のときに推量、一人称主語のときに意志となります。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <h4>
+  推量
+ </h4>
+ <p>
+  （１）　この世 暗黒に染まりし時 4人の光の戦士 現れ
+  <span class="bold">
+   ん
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_106_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   当这个世界被黑暗所笼罩的时候，将会出现四位光之战士。
+  </span>
+  <br/>
+  <span class="gray">
+   When this world is enveloped in darkness, four warriors of light shall arise.
+  </span>
+  <br/>
+  （２）　始まりの封が切れし時、雷の如き声音が響か
+  <span class="bold">
+   ん
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_106_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   在开始之时，将会雷鸣般的轰鸣。
+  </span>
+  <br/>
+  <span class="gray">
+   At the dawn of time, thunderous sounds shall echo.
+  </span>
+  <br/>
+  （３）　光を求める者にこそ、真理の扉開か
+  <span class="bold">
+   ん
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_106_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   唯有寻求光明者，方可打开真理之门。
+  </span>
+  <br/>
+  <span class="gray">
+   To those who seek the light, the door to truth shall open.
+  </span>
+ </p>
+ <h4>
+  意志
+ </h4>
+ <p>
+  （４）　いざ行か
+  <span class="bold">
+   ん
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_106_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我们出发吧。
+  </span>
+  <br/>
+  <span class="gray">
+   Let’s go.
+  </span>
+  <br/>
+  （５）　いざ参ら
+  <span class="bold">
+   ん
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_106_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我们出发吧。
+  </span>
+  <br/>
+  <span class="gray">
+   Let’s go.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  似ている文型
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n0-ntosuru/">
+   【Ｎ０文法】～んとする（意志）
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

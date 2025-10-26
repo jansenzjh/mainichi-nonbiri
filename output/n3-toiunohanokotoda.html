@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-toiunohanokotoda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-toka.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-toiumono.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋というのは＋名詞＋のことだ
+  <br/>
+  名詞＋とは＋名詞＋のことだ
+  <br/>
+  名詞句＋というのは＋名詞句＋ということだ
+  <br/>
+  名詞句＋とは＋名詞句＋ということだ
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  所谓…就是…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  単語や言葉について定義付けしたり、説明したりする文法です。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　就活
+  <span class="bold">
+   とは
+  </span>
+  、就職活動
+  <span class="bold">
+   のことだ
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_658_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   “就活”是指就职活动。
+  </span>
+  <br/>
+  <span class="gray">
+   Job hunting refers to the process of searching for employment.
+  </span>
+  <br/>
+  （２）　コンビニ
+  <span class="bold">
+   というのは
+  </span>
+  、コンビニエンスストア
+  <span class="bold">
+   のことだ
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_658_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   所谓的“コンビニ”，就是便利店。
+  </span>
+  <br/>
+  <span class="gray">
+   Convenience store, or “konbini,” refers to a convenience store.
+  </span>
+  <br/>
+  （３）　満月
+  <span class="bold">
+   とは
+  </span>
+  、少しも欠けることなく全面が輝いて見える月
+  <span class="bold">
+   のことである
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_658_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   所谓满月，是指一丝不缺地全方都闪耀着的月亮。
+  </span>
+  <br/>
+  <span class="gray">
+   Full moon is when the moon is fully illuminated and appears completely round without any visible shadows.
+  </span>
+  <br/>
+  （４）　良い教師
+  <span class="bold">
+   とは
+  </span>
+  、学生のことを理解してあげられる教師
+  <span class="bold">
+   のことだ
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_658_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   所谓好老师，是指能够理解学生的老师。
+  </span>
+  <br/>
+  <span class="gray">
+   A good teacher is someone who understands and supports their students.
+  </span>
+  <br/>
+  （５）　名大
+  <span class="bold">
+   というのは
+  </span>
+  、名古屋大学
+  <span class="bold">
+   のことだ
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_658_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   名大就是名古屋大学。
+  </span>
+  <br/>
+  <span class="gray">
+   Meidai, short for Nagoya University, refers to Nagoya Daigaku.
+  </span>
+  <br/>
+  （６）　「馬には乗ってみよ人には添うてみよ」
+  <span class="bold">
+   とは
+  </span>
+  、何でも体験してみなければ分からない
+  <span class="bold">
+   ということだ
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_658_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   所谓“路遥知马力日久见人心”，就是不管什么都要体验一下才能明白。
+  </span>
+  <br/>
+  <span class="gray">
+   The saying “Ride a horse and try, accompany a person and try” means that you won’t understand things fully until you experience them yourself.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

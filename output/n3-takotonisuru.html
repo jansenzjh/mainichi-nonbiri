@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-takotonisuru</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-tamae.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-takotoninaru.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動た形＋（という）ことにする
+  <br/>
+  名詞＋（だ）ということにする
+  <br/>
+  な形容詞語幹（＋だ）ということにする
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  就当作…
+  <br/>
+  算作
+  <br/>
+  作为
+  <br/>
+  ～と見なす
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  物事を事実とは反したようにみなす文法です。
+  <br/>
+  「～たこととする」は少し硬い表現です。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　仕事を終わらせ
+  <span class="bold">
+   たことにして
+  </span>
+  さっさと帰ってきた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_612_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   谎称工作做完了，之后就马上回家去了。
+  </span>
+  <br/>
+  <span class="gray">
+   I pretended to finish work and quickly came back home.
+  </span>
+  <br/>
+  （２）　夫の不倫を見なかっ
+  <span class="bold">
+   たことにする
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_612_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   就当做不知道丈夫的出轨。
+  </span>
+  <br/>
+  <span class="gray">
+   I will pretend not to have seen my husband’s affair.
+  </span>
+  <br/>
+  （３）　風邪
+  <span class="bold">
+   だということにして
+  </span>
+  学校を休む。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_612_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   谎称自己感冒了向学校请假。
+  </span>
+  <br/>
+  <span class="gray">
+   I will pretend to have a cold and take a day off from school.
+  </span>
+  <br/>
+  （４）　その話は聞かなかっ
+  <span class="bold">
+   たことにし
+  </span>
+  ましょう。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_612_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   就当做没听到过那句话吧。
+  </span>
+  <br/>
+  <span class="gray">
+   Let’s pretend we didn’t hear that story.
+  </span>
+  <br/>
+  （５）　会社には出張に行っ
+  <span class="bold">
+   たことにして
+  </span>
+  、旅行を満喫してきた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_612_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   就当作是为了公司去出差、好好的享受了一下旅行。
+  </span>
+  <br/>
+  <span class="gray">
+   I will pretend to have gone on a business trip to the company and enjoyed a trip.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-takotoninaru/">
+   【Ｎ３文法】～たことになる／たこととなる
+  </a>
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-takotogaaru/">
+   【Ｎ３文法】～たことがある／たことがない
+  </a>
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-kotogaaru/">
+   【Ｎ３文法】～ことがある／こともある
+  </a>
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n4-kotogadekiru/">
+   【Ｎ４文法】～ことができる
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

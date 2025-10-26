@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n4-teshimau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n4-tsumorida.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n4-teoku.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動て形＋しまう
+  <br/>
+  動て形の「
+  <del datetime="2019-12-30T03:11:25+00:00">
+   テ
+  </del>
+  」＋ちゃう／じゃう
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  ①…完／…了
+  <br/>
+  ②表示后悔,遗憾
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  二つの意味があります。
+ </p>
+ <p>
+  ①完了
+  <br/>
+  ②後悔、悔しさ
+ </p>
+ <p>
+  口語は「ちゃう／じゃう」を用います。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　昔のことは忘れて
+  <span class="bold">
+   しまった
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_780_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   把以前的事情忘了。
+  </span>
+  <br/>
+  <span class="gray">
+   I have forgotten about the past.
+  </span>
+  <br/>
+  （２）　ほかの人はみんな行って
+  <span class="bold">
+   しまった
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_780_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   其他人都走了。
+  </span>
+  <br/>
+  <span class="gray">
+   Everyone else has left.
+  </span>
+  <br/>
+  （３）　一生分の運を使い切っ
+  <span class="bold">
+   ちゃった
+  </span>
+  気がする。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_780_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   感觉已经用尽了一生的运气。
+  </span>
+  <br/>
+  <span class="gray">
+   I feel like I’ve used up all my luck in a lifetime.
+  </span>
+  <br/>
+  （４）　分からなくて諦めて
+  <span class="bold">
+   しまった
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_780_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   不明白就放弃了。
+  </span>
+  <br/>
+  <span class="gray">
+   I didn’t understand and gave up.
+  </span>
+  <br/>
+  （５）　見てはいけないものを見て
+  <span class="bold">
+   しまった
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_780_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   看到了不该看的东西。
+  </span>
+  <br/>
+  <span class="gray">
+   I saw something I shouldn’t have seen.
+  </span>
+  <br/>
+  （６）　罪を犯して
+  <span class="bold">
+   しまった
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_780_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   犯了罪。
+  </span>
+  <br/>
+  <span class="gray">
+   I committed a sin.
+  </span>
+  <br/>
+  （７）　よく行くお店だったのに、閉店して
+  <span class="bold">
+   しまった
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_780_07.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   明明是经常去的店，却关门了。
+  </span>
+  <br/>
+  <span class="gray">
+   It was a shop I used to frequent, but it has closed down.
+  </span>
+  <br/>
+  （８）　フラれ
+  <span class="bold">
+   ちゃった
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_780_08.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   被甩了。
+  </span>
+  <br/>
+  <span class="gray">
+   I got dumped.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

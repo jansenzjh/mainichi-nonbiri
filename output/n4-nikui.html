@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n4-nikui</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n4-ninaru.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n4-nasai.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動ます形＋にくい
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  难以…
+  <br/>
+  不容易…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  動ます形に接続して、その動作が困難、あるいはその状態が発生する可能性が低いことを表します。
+  <br/>
+  「にくい」は、い形容詞として扱われます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　先生の説明はいつも分かり
+  <span class="bold">
+   にくい
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_791_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   老师的说明总是很难理解。
+  </span>
+  <br/>
+  <span class="gray">
+   The teacher’s explanations are always hard to understand.
+  </span>
+  <br/>
+  （２）　このペンは使い
+  <span class="bold">
+   にくい
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_791_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   这支笔不好用。
+  </span>
+  <br/>
+  <span class="gray">
+   This pen is difficult to use.
+  </span>
+  <br/>
+  （３）　私は昔から太り
+  <span class="bold">
+   にくい
+  </span>
+  体質だ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_791_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我从以前开始就不容易胖的体质。
+  </span>
+  <br/>
+  <span class="gray">
+   I have always had a tendency to have difficulty gaining weight.
+  </span>
+  <br/>
+  （４）　育毛剤のおかげで、最近髪の毛が抜け
+  <span class="bold">
+   にくく
+  </span>
+  なってきている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_791_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   多亏了育发剂，最近头发很难脱落。
+  </span>
+  <br/>
+  <span class="gray">
+   Thanks to the hair growth product, my hair has become less likely to fall out recently.
+  </span>
+  <br/>
+  （５）　彼女にこの話はし
+  <span class="bold">
+   にくい
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_791_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   很难告诉她。
+  </span>
+  <br/>
+  <span class="gray">
+   It’s difficult for me to talk to her about this.
+  </span>
+  <br/>
+  （６）　この単語は長くて覚え
+  <span class="bold">
+   にくい
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_791_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   这个单词太长，不好记。
+  </span>
+  <br/>
+  <span class="gray">
+   This word is long and difficult to remember.
+  </span>
+  <br/>
+  （７）　燃え
+  <span class="bold">
+   にくい
+  </span>
+  建材で家を作る。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_791_07.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   用不易燃烧的建材建造房子。
+  </span>
+  <br/>
+  <span class="gray">
+   Build the house with fire-resistant building materials.
+  </span>
+  <br/>
+  （８）　このコップは頑丈で壊れ
+  <span class="bold">
+   にくい
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_791_08.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   这个杯子很结实，不容易坏。
+  </span>
+  <br/>
+  <span class="gray">
+   This cup is sturdy and not easily breakable.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n4-yasui/">
+   【Ｎ４文法】～やすい（易い）
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

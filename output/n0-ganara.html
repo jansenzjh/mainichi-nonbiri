@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n0-ganara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n0-ganaramoda.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n0-gaii.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞Ａ＋が＋名詞Ａ＋なら
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  もし他の[名詞]だったなら
+  <br/>
+  要是…就…了（但实际上…）
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  同じ名詞を２回繰り返して使う文法です。一般的に使われる表現はとても少なく、「世が世なら（時代が時代なら）」「相手が相手なら」等です。
+ </p>
+ <p>
+  世が世なら（時代が時代なら）　→　もし別の時代だったなら
+  <br/>
+  相手が相手なら　→　もし別の相手だったなら
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）
+  <span class="bold">
+   世が世なら
+  </span>
+  切腹ものだ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_008_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   如果时世如此，那就是切腹之事。
+  </span>
+  <br/>
+  <span class="gray">
+   If it were a different time, it would be a matter of ritual suicide.
+  </span>
+  <br/>
+  （２）
+  <span class="bold">
+   時代が時代なら
+  </span>
+  死刑だ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_008_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   如果时代如此，那就是死刑。
+  </span>
+  <br/>
+  <span class="gray">
+   If it were a different era, it would be the death penalty.
+  </span>
+  <br/>
+  （３）
+  <span class="bold">
+   世が世なら
+  </span>
+  彼女は絶世の美人として名を残したはずだ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_008_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   如果世事如此，她本该作为绝世美人名留青史。
+  </span>
+  <br/>
+  <span class="gray">
+   If things were different, she would have left a name as an extraordinary beauty.
+  </span>
+  <br/>
+  （４）
+  <span class="bold">
+   世が世なら
+  </span>
+  戦争になる事態だ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_008_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   如果世事如此，那将是一场战争的局势。
+  </span>
+  <br/>
+  <span class="gray">
+   If it were a different world, it would be a situation leading to war.
+  </span>
+  <br/>
+  （５）　この子は
+  <span class="bold">
+   世が世なら
+  </span>
+  王になっていただろう。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_008_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   如果世事如此，这个孩子本可以成为国王。
+  </span>
+  <br/>
+  <span class="gray">
+   If circumstances were different, this child could have become a king.
+  </span>
+  <br/>
+  （６）
+  <span class="bold">
+   相手が相手なら
+  </span>
+  負けている試合だった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_008_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   如果对手如此，那就是一场败局。
+  </span>
+  <br/>
+  <span class="gray">
+   If the opponent were different, it would have been a losing game.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  「時代」や「相手」以外、一般的に使える表現が見つかりませんでしたので、もしありましたらコメントください。
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

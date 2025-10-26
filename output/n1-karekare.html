@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n1-karekare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n1-katagata.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n1-karashite.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  い形容詞語幹＋かれ＋い形容詞語幹＋かれ
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  不论…还是…
+  <br/>
+  或…或…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  どのような状況下でも変わらないことを表します。
+  <br/>
+  「遅かれ早かれ（早晚／迟早／总有一天）」「多かれ少なかれ（或多或少）」などの慣用表現がよく用いられます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　正しい努力を続ければ、
+  <span class="bold">
+   遅かれ早かれ
+  </span>
+  芽は出る。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_120_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   如果继续正确的努力，早晚会成功的。
+  </span>
+  <br/>
+  <span class="gray">
+   If you continue to make the right efforts, sooner or later, the bud will sprout.
+  </span>
+  <br/>
+  （２）　ギャンブルに明け暮れる夫は、
+  <span class="bold">
+   遅かれ早かれ
+  </span>
+  いずれ離婚することになる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_120_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   丈夫如果继续沉迷赌博的话，迟早会离婚的。
+  </span>
+  <br/>
+  <span class="gray">
+   A husband who indulges in gambling will eventually, sooner or later, end up in divorce.
+  </span>
+  <br/>
+  （３）　どんな人でも
+  <span class="bold">
+   多かれ少なかれ
+  </span>
+  、個々の中に闇は持ってるものだ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_120_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   任何人或多或少，每个人心中都有黑暗。
+  </span>
+  <br/>
+  <span class="gray">
+   Everyone, to a greater or lesser extent, carries darkness within themselves.
+  </span>
+  <br/>
+  （４）　生きる限り、
+  <span class="bold">
+   多かれ少なかれ
+  </span>
+  多くの人に迷惑を掛けている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_120_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   只要活着，或多或少都会给很多人带来麻烦。
+  </span>
+  <br/>
+  <span class="gray">
+   As long as we live, to a greater or lesser extent, we cause inconvenience to many people.
+  </span>
+  <br/>
+  （５）　恋愛では、
+  <span class="bold">
+   多かれ少なかれ
+  </span>
+  相手に対して理想を抱いてしまう。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_120_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   在恋爱中，或多或少都会对对方抱有理想。
+  </span>
+  <br/>
+  <span class="gray">
+   In love, to a greater or lesser extent, we tend to hold ideals about the other person.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

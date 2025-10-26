@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n1-nikamakete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n1-nikangamite.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n1-nikakotsukete.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋にかまけて
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  忙于…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  あることだけに気を取られて、それ以外の事がおろそかになっていることを表します。後項では本来しなければならないことができなかった等の悪い結果がきます。
+  <br/>
+  「忙しさにかまけて」という言い方はよく用いられます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　本番は明日なのに、忙しさ
+  <span class="bold">
+   にかまけて
+  </span>
+  練習できていなかった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_269_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   明明明天就是正式比赛了，结果忙到无暇顾忌练习。
+  </span>
+  <br/>
+  <span class="gray">
+   The performance is tomorrow, but I haven’t been able to practice due to busyness.
+  </span>
+  <br/>
+  （２）　大人になると日常
+  <span class="bold">
+   にかまけて
+  </span>
+  様々な事から逃げてしまっている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_269_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   成为大人后想从各种事情中逃脱出来。
+  </span>
+  <br/>
+  <span class="gray">
+   As adults, we tend to get caught up in our daily lives and escape from various things.
+  </span>
+  <br/>
+  （３）　部活
+  <span class="bold">
+   にかまけて
+  </span>
+  勉強を疎かにしてはいけない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_269_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   专注于社团活动也不能疏忽了学习。
+  </span>
+  <br/>
+  <span class="gray">
+   Don’t neglect your studies because of club activities.
+  </span>
+  <br/>
+  （４）　子育て
+  <span class="bold">
+   にかまけて
+  </span>
+  家事にまで手が回らない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_269_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   专注育儿结果家务事也忙不过来。
+  </span>
+  <br/>
+  <span class="gray">
+   Being engrossed in parenting, I don’t even have time for household chores.
+  </span>
+  <br/>
+  （５）　仕事
+  <span class="bold">
+   にかまけて
+  </span>
+  趣味に費やす時間もない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_269_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   专注于工作结果没时间做自己感兴趣的事情。
+  </span>
+  <br/>
+  <span class="gray">
+   Being engrossed in work, there’s no time to devote to hobbies.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

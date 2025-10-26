@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-zu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-zunisumu.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-youtosuru.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動詞ない形＋ず（に）
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  不…就…
+  <br/>
+  因为没有…而…
+  <br/>
+  ～しないで～
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  「ず」は動詞ない形に接続して、否定を表します。「ない」よりもやや硬い表現です。
+  <br/>
+  後件には他の動作を表す動詞等が接続され、全体として「～しない状態で～する」という文を作ります。（付帯状況）
+  <br/>
+  口語では「～ないで」が用いられます。
+  <br/>
+  「する」の場合は「しず」ではなく、「せず」になります。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　挨拶もせ
+  <span class="bold">
+   ずに
+  </span>
+  ごめんなさい！
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_597_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   连招呼都没打真是对不起！
+  </span>
+  <br/>
+  <span class="gray">
+   I’m sorry for not greeting you!
+  </span>
+  <br/>
+  （２）　いつでも笑顔を絶やさ
+  <span class="bold">
+   ずに
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_597_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   无论什么时候脸上都挂着微笑。
+  </span>
+  <br/>
+  <span class="gray">
+   Always keep a smile on your face.
+  </span>
+  <br/>
+  （３）　ご無理なさら
+  <span class="bold">
+   ずに
+  </span>
+  体調気をつけてください。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_597_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   请不要勉强自己，多多注意身体。
+  </span>
+  <br/>
+  <span class="gray">
+   Take care of your health and don’t push yourself too hard.
+  </span>
+  <br/>
+  （４）　トイレ行って用足さ
+  <span class="bold">
+   ずに
+  </span>
+  帰ってくる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_597_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   去了厕所还没上就回来了。
+  </span>
+  <br/>
+  <span class="gray">
+   Go to the toilet and come back without taking care of your business.
+  </span>
+  <br/>
+  （５）　大体何も苦労せ
+  <span class="bold">
+   ずに
+  </span>
+  クリアできるゲームとか面白くない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_597_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   基本上不费力就能通过的游戏没什么意思。
+  </span>
+  <br/>
+  <span class="gray">
+   Games that can be cleared without much difficulty are not interesting.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

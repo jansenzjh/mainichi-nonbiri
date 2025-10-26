@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n2-tuide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n2-tutuaru.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n2-tsutsu.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動詞辞書形＋ついで（に）
+  <br/>
+  動た形＋ついで（に）
+  <br/>
+  名詞（＋の）＋ついで（に）
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  顺便…
+  <br/>
+  顺路
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  ある機会を利用して別の事をすることを表します。
+  <br/>
+  前項が主要な動作で、後項の重要性は前項よりも低いです。
+  <br/>
+  「ついで」自体は名詞として扱い、「ついでに」は接続詞としても使うことができます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　掃除の
+  <span class="bold">
+   ついでに
+  </span>
+  家具を並び替えた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_406_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   打扫时，顺便把家具重新摆了一下。
+  </span>
+  <br/>
+  <span class="gray">
+   I rearranged the furniture while cleaning.
+  </span>
+  <br/>
+  （２）　出張
+  <span class="bold">
+   ついでに
+  </span>
+  ご当地Ｂ級グルメを食べてきた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_406_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   出差时顺便吃了当地B级美食。
+  </span>
+  <br/>
+  <span class="gray">
+   I ate local B-class gourmet food while on a business trip.
+  </span>
+  <br/>
+  （３）　買い物の
+  <span class="bold">
+   ついでに
+  </span>
+  ガソリン入れてきた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_406_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   买东西时顺便加了油。
+  </span>
+  <br/>
+  <span class="gray">
+   I filled up the gas tank while shopping.
+  </span>
+  <br/>
+  （４）　働きたくないので大学に行きました。勉強は
+  <span class="bold">
+   ついで
+  </span>
+  です。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_406_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   因为不想工作，所以去了大学。顺便学习。
+  </span>
+  <br/>
+  <span class="gray">
+   I went to college because I didn’t want to work. Studying is just a side thing.
+  </span>
+  <br/>
+  （５）　コンビニに弁当買いにいって
+  <span class="bold">
+   ついでに
+  </span>
+  雑誌も買ってきた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_406_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   去便利店买便当，顺便买了杂志。
+  </span>
+  <br/>
+  <span class="gray">
+   I went to the convenience store to buy a bento and, in the process, also bought a magazine.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

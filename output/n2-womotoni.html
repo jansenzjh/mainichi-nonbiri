@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n2-womotoni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n2-wonozoite.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n2-womegutte.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋をもとに（して）
+  <br/>
+  名詞＋をもとにした＋名詞
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  以…为基础
+  <br/>
+  以…为依据
+  <br/>
+  在…的基础上
+  <br/>
+  根据…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  材料、素材、根拠となるもの、参考となるものを表します。
+  <br/>
+  漢字は「基（もと）」です。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　これは実話
+  <span class="bold">
+   をもとに
+  </span>
+  描いた絵本です。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_525_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   这是根据真实情况画的连环画。
+  </span>
+  <br/>
+  <span class="gray">
+   This picture book is based on a true story.
+  </span>
+  <br/>
+  （２）　膨大なデータ
+  <span class="bold">
+   をもとに
+  </span>
+  未来を予測する。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_525_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   根据庞大的数据预测未来。
+  </span>
+  <br/>
+  <span class="gray">
+   Predicting the future based on vast amounts of data.
+  </span>
+  <br/>
+  （３）　この短編小説は実際に起きた事件
+  <span class="bold">
+   をもとに
+  </span>
+  書かれている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_525_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   这篇短篇小说是根据实际发生的事件写的。
+  </span>
+  <br/>
+  <span class="gray">
+   This short story is written based on an actual event.
+  </span>
+  <br/>
+  （４）　彼女の経験
+  <span class="bold">
+   をもとに
+  </span>
+  アドバイスしてくれました。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_525_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   根据她的经验她给了我建议。
+  </span>
+  <br/>
+  <span class="gray">
+   He provided advice based on her experiences.
+  </span>
+  <br/>
+  （５）　お客さまの声
+  <span class="bold">
+   をもとに
+  </span>
+  今後とも改善に努めてまいります。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_525_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   根据客户的呼声，今后也会努力改善。
+  </span>
+  <br/>
+  <span class="gray">
+   We will strive for improvement based on customer feedback.
+  </span>
+  <br/>
+  （６）　このダイエット法が痩せることを科学的根拠
+  <span class="bold">
+   をもとに
+  </span>
+  説明します。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_525_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   以科学的根据来说明这个减肥法能减肥。
+  </span>
+  <br/>
+  <span class="gray">
+   This diet method explains weight loss based on scientific evidence.
+  </span>
+  <br/>
+  （７）　戦時中の状況を実体験
+  <span class="bold">
+   をもとに
+  </span>
+  語っていただいた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_525_07.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   以实际体验为基础讲述了战争时期的情况。
+  </span>
+  <br/>
+  <span class="gray">
+   Sharing wartime experiences based on real-life accounts.
+  </span>
+  <br/>
+  （８）　新たな体験
+  <span class="bold">
+   をもとに
+  </span>
+  新しい価値観が形成されていく。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_525_08.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   以新的体验为基础，形成新的价值观。
+  </span>
+  <br/>
+  <span class="gray">
+   New values are formed based on new experiences.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

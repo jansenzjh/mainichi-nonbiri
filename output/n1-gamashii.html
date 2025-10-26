@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n1-gamashii</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n1-gatera.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n1-gahayaika.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋がましい
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  近似…
+  <br/>
+  类似…
+  <br/>
+  有点…似的
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  接続された名詞の様子に近いという意味を表します。
+  <br/>
+  通常は良くないことに用いられ、言い訳がましい、差し出がましい、押しつけがましい、恩着せがましい、未練がましい等、接続できる名詞は限られていますので、そのまま単語として覚えたほうが良さそうです。
+  <br/>
+  この表現はいずれも無理やりする、強制するのようなニュアンスを持ちます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　言い訳
+  <span class="bold">
+   がましい
+  </span>
+  ことは言わないほうがカッコいい。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_131_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   不要说类似辩解的话比较好看。
+  </span>
+  <br/>
+  <span class="gray">
+   It’s cooler not to make excuses.
+  </span>
+  <br/>
+  （２）　何も分かってないくせに意見を言うなど差し出
+  <span class="bold">
+   がましい
+  </span>
+  行為は慎むべきだ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_131_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   明明什么都不懂，却还提出意见，这种多管闲事的行为应该谨慎。
+  </span>
+  <br/>
+  <span class="gray">
+   It’s advisable to refrain from offering opinions when you don’t understand anything.
+  </span>
+  <br/>
+  （３）　自宅まで来る宗教勧誘の人は基本押しつけ
+  <span class="bold">
+   がましい
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_131_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   上门传教的人基本上都是强加于人的。
+  </span>
+  <br/>
+  <span class="gray">
+   People who come to your home for religious solicitation are generally pushy.
+  </span>
+  <br/>
+  （４）　彼は自分からお礼を求めてくる恩着せ
+  <span class="bold">
+   がましい
+  </span>
+  やつだ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_131_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   他是一个自己向他求谢，恩人自居的家伙。
+  </span>
+  <br/>
+  <span class="gray">
+   He is a guy who seeks gratitude from others and acts condescending.
+  </span>
+  <br/>
+  （５）　いつまでも元カノのことを引きずる男は未練
+  <span class="bold">
+   がましく
+  </span>
+  て男らしくない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_131_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   分手后还依然想着前女友，这样的男生一点都不干脆，没有男子气概。
+  </span>
+  <br/>
+  <span class="gray">
+   Men who continue to cling to their ex-girlfriends are unmanly and lacking in dignity.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-sue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-tabini.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-sounisuru.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋の＋末（に）／末の
+  <br/>
+  動た形＋末（に）／末の
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  经过…最后…
+  <br/>
+  …之后，结果…
+  <br/>
+  最后…
+  <br/>
+  ～した結果～
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  様々な困難を経た後の良い結果や中立的な結果を表し、結果に辿り着くまでの過程の長さや困難を強調しています。
+  <br/>
+  「末の」の後には名詞が接続されます。
+ </p>
+ <p>
+  似ている文型に「～あげく」がありますが、こちらは悪い結果に対して使われます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　原材料の価格高騰の為、迷った
+  <span class="bold">
+   末に
+  </span>
+  今回の値上げを決断しました。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_596_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   由于原料价格上升，经过一阵犹豫之后最后决定提高商品的价格。
+  </span>
+  <br/>
+  <span class="gray">
+   After much deliberation due to the soaring prices of raw materials, we ultimately decided to raise the prices this time.
+  </span>
+  <br/>
+  （２）　悩みに悩んだ
+  <span class="bold">
+   末
+  </span>
+  、親元を離れて留学することに決めた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_596_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   翻来覆去地烦恼之后，决定离开父母的身边去留学。
+  </span>
+  <br/>
+  <span class="gray">
+   After much soul-searching, I decided to leave my parents and study abroad.
+  </span>
+  <br/>
+  （３）　白熱した議論の
+  <span class="bold">
+   末に
+  </span>
+  、両親は猫を飼うことを許してくれた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_596_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   经过激烈的讨论之后，父母允许了我养猫。
+  </span>
+  <br/>
+  <span class="gray">
+   After a heated discussion, my parents finally allowed us to have a cat.
+  </span>
+  <br/>
+  （４）　長い時間考えた
+  <span class="bold">
+   末に
+  </span>
+  今の考えがある。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_596_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   经过了长时间的思考之后，才有了现在的想法。
+  </span>
+  <br/>
+  <span class="gray">
+   After a long period of contemplation, I have arrived at my current thoughts.
+  </span>
+  <br/>
+  （５）　プロの技術は弛まぬ努力と鍛錬の
+  <span class="bold">
+   末に
+  </span>
+  成り立つ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_596_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   在坚持不懈的努力和锻炼下，终于掌握了专业的技术。
+  </span>
+  <br/>
+  <span class="gray">
+   Professional expertise is the result of relentless effort and training.
+  </span>
+  <br/>
+  （６）　本人が色々考えた
+  <span class="bold">
+   末の
+  </span>
+  結論は誰にも否定する権利はない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_596_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   本人在考虑了各种事情后得出的结论是对谁也没有否定的权利。
+  </span>
+  <br/>
+  <span class="gray">
+   No one has the right to deny the conclusion reached by the person after considering various factors.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n2-ageku/">
+   【Ｎ２文法】～挙句（あげく）／挙句に／挙句の果てに
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

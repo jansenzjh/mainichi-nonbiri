@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n0-nuke</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n0-o-go-oki.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n0-ntosuru.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動詞マス形＋抜け
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  ～たばかり（動作直後）
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  動詞マス形に「～抜け」をつけると
+  <span class="pinkline">
+   「～したばかり」の意味を表す
+  </span>
+  例として「起き抜け」があります。色々な人に聞いてみた結果、西日本では比較的使われる表現だそうですが、少なくとも私の地域（青森）だと一度も聞いたことがありませんでした。また、「～抜け」が接続できるのはおそらく「起きる」だけだと思われます。もし他にあればコメントください。
+  <br/>
+  なお、同じく「～抜け」がある「も抜け」「底抜け」「腑抜け」などの「抜け」が意味が違うので「起き抜け」とは別です。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  <a href="https://www.youtube.com/watch?v=3RO7LKo1Ig4&amp;t=391s" target="_blank">
+   <img alt="" class="aligncenter size-full wp-image-84604 lazyload" data-aspectratio="600/337" data-src="https://mainichi-nonbiri.com/wp-content/uploads/2025/07/25071604.webp" data-srcset="https://mainichi-nonbiri.com/wp-content/uploads/2025/07/25071604.webp 600w, https://mainichi-nonbiri.com/wp-content/uploads/2025/07/25071604-300x169.webp 300w" decoding="async" height="337" sizes="(max-width: 600px) 100vw, 600px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="600"/>
+   <noscript>
+    <img alt="" class="aligncenter size-full wp-image-84604" decoding="async" height="337" sizes="(max-width: 600px) 100vw, 600px" src="https://mainichi-nonbiri.com/wp-content/uploads/2025/07/25071604.webp" srcset="https://mainichi-nonbiri.com/wp-content/uploads/2025/07/25071604.webp 600w, https://mainichi-nonbiri.com/wp-content/uploads/2025/07/25071604-300x169.webp 300w" width="600"/>
+   </noscript>
+  </a>
+ </p>
+ <p>
+  （１）　起き
+  <span class="bold">
+   抜け
+  </span>
+  にコーヒーを飲む。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/okinuke1.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   起床后喝咖啡。
+  </span>
+  <br/>
+  <span class="gray">
+   Drink coffee right after waking up.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <noscript>
+   <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3RO7LKo1Ig4?si=ZD7HTcA_TjzPIuiM&amp;start=391" title="YouTube video player" width="560">
+   </iframe>
+  </noscript>
+  <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="lazyload" data-src="https://www.youtube.com/embed/3RO7LKo1Ig4?si=ZD7HTcA_TjzPIuiM&amp;start=391" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player" width="560">
+  </iframe>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

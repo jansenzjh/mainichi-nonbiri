@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n2-nichigainai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n2-nihakedo.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n2-niatatte.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動詞普通形＋に違いない
+  <br/>
+  い形容詞普通形＋に違いない
+  <br/>
+  な形容詞語幹＋に違いない
+  <br/>
+  名詞＋に違いない
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  一定…
+  <br/>
+  肯定…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  何らかの根拠に基づく、話し手の強めの判断・断定を表します。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　彼女の表情を見る限り、何か秘密がある
+  <span class="bold">
+   に違いない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_462_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   只要看到她的表情，肯定有什么秘密。
+  </span>
+  <br/>
+  <span class="gray">
+   Judging by her expression, there must be some secret.
+  </span>
+  <br/>
+  （２）　私が抱いているこの感情は、きっと彼女に対する恋心
+  <span class="bold">
+   に違いない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_462_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我所怀有的这种感情，一定是对她的爱慕之心。
+  </span>
+  <br/>
+  <span class="gray">
+   The emotion I have is undoubtedly a love for her.
+  </span>
+  <br/>
+  （３）　見た感じ、彼は相当な手練れ
+  <span class="bold">
+   に違いない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_462_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   看过的感觉，他肯定是很熟练的。
+  </span>
+  <br/>
+  <span class="gray">
+   Based on appearances, he is undoubtedly quite skilled.
+  </span>
+  <br/>
+  （４）　みんなが口を揃えて言うんだから、そう
+  <span class="bold">
+   に違いない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_462_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   大家都异口同声地说，肯定是这样的。
+  </span>
+  <br/>
+  <span class="gray">
+   Since everyone says it unanimously, it must be true.
+  </span>
+  <br/>
+  （５）　神はいる
+  <span class="bold">
+   に違いない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_462_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   神肯定存在。
+  </span>
+  <br/>
+  <span class="gray">
+   There is no doubt that God exists.
+  </span>
+  <br/>
+  （６）　これらは何らかの陰謀
+  <span class="bold">
+   に違いない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_462_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   这些肯定是某种阴谋。
+  </span>
+  <br/>
+  <span class="gray">
+   These are undoubtedly part of some conspiracy.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n2-nikimatteiru/">
+   【Ｎ２文法】～に決まっている
+  </a>
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n2-nisouinai/">
+   【Ｎ２文法】～に相違ない
+  </a>
+ </p>
+ <p>
+  「～に決まっている」「～に違いない」「～に相違ない」はそれぞれ同じ意味ですが、最も柔らかい表現は「～に決まっている」です。「～に相違ない」は主に書き言葉として用いられます。
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

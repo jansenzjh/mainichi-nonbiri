@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n2-monono</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n2-motouzenda.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n2-mononara.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動詞名詞修飾形＋ものの
+  <br/>
+  な形容詞動詞修飾形＋ものの
+  <br/>
+  い形容詞動詞修飾形＋ものの
+  <br/>
+  名詞＋である＋ものの
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  虽然…但是…
+  <br/>
+  しかし
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  既に発生したこと対して用いる。
+  <br/>
+  「しかし」とほぼ同じで、それよりも硬い表現。
+  <br/>
+  後項には、前項に対応する事柄がまだ行われていないか、通常起こらない、起こりそうにないことを述べる。
+  <br/>
+  後項には自信がなかったり、実現困難なことが続くことが多い。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　五十音は発音できるようになった
+  <span class="bold">
+   ものの
+  </span>
+  、書けと言われれば自信がない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_507_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   虽然可以开始说五十音了，但是说到写还是没什么自信。
+  </span>
+  <br/>
+  <span class="gray">
+   While I can pronounce the hiragana and katakana, I lack confidence in writing them.
+  </span>
+  <br/>
+  （２）　歩いて帰ると言った
+  <span class="bold">
+   ものの
+  </span>
+  、雨が降ってきたので結局タクシーで帰った。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_507_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   虽然说了走着回家，但因为下雨结果打车回家了。
+  </span>
+  <br/>
+  <span class="gray">
+   Despite saying that I would walk home, it started raining and I ended up taking a taxi.
+  </span>
+  <br/>
+  （３）　頭から落ちた
+  <span class="bold">
+   ものの
+  </span>
+  頭部は骨折しなかった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_507_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   虽然是头着地但是没有骨折。
+  </span>
+  <br/>
+  <span class="gray">
+   It fell on my head, but fortunately, my skull didn’t fracture.
+  </span>
+  <br/>
+  （４）　咳はする
+  <span class="bold">
+   ものの
+  </span>
+  、体調は戻ってきている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_507_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   虽然会咳嗽，但身体状况已经恢复了。
+  </span>
+  <br/>
+  <span class="gray">
+   I still cough, but my condition is improving.
+  </span>
+  <br/>
+  （５）　使ってはみた
+  <span class="bold">
+   ものの
+  </span>
+  、しっくりこない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_507_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   虽然试用了，但是不合适。
+  </span>
+  <br/>
+  <span class="gray">
+   I tried using it, but it doesn’t feel right.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  「～とはいうものの」は慣用表現（虽说…）。
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

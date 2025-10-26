@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n1-izatonaruto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n1-izen.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n1-izatonaruto-2.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  いざ＋動辞書形＋となると
+  <br/>
+  いざ＋名詞＋となると
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  一旦真的要…的话，就会…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  考えてるだけでは別に何とも思わないのに、実際にその行動をすることになったときにやっとその難しさに気付くことを表します。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）
+  <span class="bold">
+   いざ
+  </span>
+  話したり書く
+  <span class="bold">
+   となると
+  </span>
+  簡単な言葉しか使えなくなっちゃう。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_117_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   一到了把话写下来的时候，就只能用简单的语言。
+  </span>
+  <br/>
+  <span class="gray">
+   When it comes to speaking or writing, I can only use simple words.
+  </span>
+  <br/>
+  （２）　いつも強気だが
+  <span class="bold">
+   いざ
+  </span>
+  戦い
+  <span class="bold">
+   となると
+  </span>
+  そうはいられないだろう。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_117_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   虽然平时很强势，一到战斗的时候却不中用。
+  </span>
+  <br/>
+  <span class="gray">
+   I’m always confident, but when it comes to a battle, it’s hard to maintain that attitude.
+  </span>
+  <br/>
+  （３）
+  <span class="bold">
+   いざ
+  </span>
+  自分が当事者
+  <span class="bold">
+   となると
+  </span>
+  どの選択が正しいのかもう分からなくなってしまう。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_117_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   一到了自己是当事人的时候，就不知道哪个选择是正确的了。
+  </span>
+  <br/>
+  <span class="gray">
+   When I myself become involved, I lose sight of which choice is the right one.
+  </span>
+  <br/>
+  （４）　いつも一緒で、
+  <span class="bold">
+   いざ
+  </span>
+  お別れ
+  <span class="bold">
+   となると
+  </span>
+  名残惜しく感じる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_117_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   因为平时一直在一起，到了分别的时候就会感到依依不舍。
+  </span>
+  <br/>
+  <span class="gray">
+   We’re always together, but when it’s time to say goodbye, I feel reluctant.
+  </span>
+  <br/>
+  （５）　生きるのは辛いけど
+  <span class="bold">
+   いざ
+  </span>
+  死ぬ
+  <span class="bold">
+   となると
+  </span>
+  勇気が出ない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_117_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   虽然活着很艰辛但是却没有赴死的勇气。
+  </span>
+  <br/>
+  <span class="gray">
+   Life is tough, but when it comes to actually dying, I lack the courage.
+  </span>
+  <br/>
+  （６）　告白しようとしてたのに
+  <span class="bold">
+   いざ
+  </span>
+  その時
+  <span class="bold">
+   となると
+  </span>
+  何も言えなかった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_117_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   本来想要告白，但真到了那个时候什么也说不出来了。
+  </span>
+  <br/>
+  <span class="gray">
+   I was about to confess, but when the moment came, I couldn’t say anything.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

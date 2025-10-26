@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-takotoninaru</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-takotonisuru.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-takotogaaru.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動た形＋（という）ことになる
+  <br/>
+  動た形＋（という）こととなる
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  ～と見なされる。
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  「
+  <a href="https://mainichi-nonbiri.com/grammar/n3-takotonisuru/">
+   ～たことにする／たこととする
+  </a>
+  」と同じく物事を事実とは反したようにみなす文法ですが、こちらは自分の意志とは関係のないことに対して使う客観的な表現です。
+  <br/>
+  「～たこととなる」は少し硬い表現です。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　３０００円値引きされていたということは、５０００円で買え
+  <span class="bold">
+   たということになる
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_607_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   减价3000日元的话，花5000日元就能买到。
+  </span>
+  <br/>
+  <span class="gray">
+   That means it could be bought for 5,000 yen, considering the 3,000 yen discount.
+  </span>
+  <br/>
+  （２）　ベランダに出て洗濯物を干したから、今日も一応外に出
+  <span class="bold">
+   たことになっている
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_607_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   去阳台晾了洗的衣服，今天也暂时出去了。
+  </span>
+  <br/>
+  <span class="gray">
+   By going out to the balcony and hanging the laundry, it can be considered that I went outside today, at least.
+  </span>
+  <br/>
+  （３）　移動を含めれば実際に降り立っていないが全都道府県に行っ
+  <span class="bold">
+   たこととなる
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_607_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   包括移动在内，实际上没有下车，但是去了全都道府县。
+  </span>
+  <br/>
+  <span class="gray">
+   Although I didn’t actually set foot in all prefectures, it can be considered that I have been to every prefecture, including the travel.
+  </span>
+  <br/>
+  （４）　キャッシュバックで買ったので、実質半額で買え
+  <span class="bold">
+   たことになる
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_607_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   因为用现金退款买了，所以实际上可以半价购买。
+  </span>
+  <br/>
+  <span class="gray">
+   Since I bought it with cashback, it can be considered that I bought it for half price in reality.
+  </span>
+  <br/>
+  （５）　今週も休めず出勤するなら１５連勤し
+  <span class="bold">
+   たことになって
+  </span>
+  しまう。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_607_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   本周也不休息上班的话，就工作了15天。
+  </span>
+  <br/>
+  <span class="gray">
+   If I work without taking a day off this week as well, it will be considered that I worked for 15 consecutive days.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-takotonisuru/">
+   【Ｎ３文法】～たことにする／たこととする
+  </a>
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-takotogaaru/">
+   【Ｎ３文法】～たことがある／たことがない
+  </a>
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-kotogaaru/">
+   【Ｎ３文法】～ことがある／こともある
+  </a>
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n4-kotogadekiru/">
+   【Ｎ４文法】～ことができる
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

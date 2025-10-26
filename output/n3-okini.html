@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-okini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-okudasaru.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-okagede.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋おきに
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  每隔…
+  <br/>
+  ～間隔で
+  <br/>
+  その間隔を空けて～
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  数詞に接続して「その間隔を空けて～」という意味を表します。
+  <br/>
+  数詞とは１つ、２本、３台、４個、５日、６年などのことです。
+  <br/>
+  例えば１日おきには隔日、１週間おきには隔週、１年おきには隔年と同じ意味になります。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　２日
+  <span class="bold">
+   おきに
+  </span>
+  しかシャワーを浴びない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_559_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   隔两天洗一次澡。
+  </span>
+  <br/>
+  <span class="gray">
+   I only take a shower every other day.
+  </span>
+  <br/>
+  （２）　医者から１か月
+  <span class="bold">
+   おきに
+  </span>
+  通院するように言われている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_559_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   医生叮嘱一个月到医院复查一次。
+  </span>
+  <br/>
+  <span class="gray">
+   The doctor told me to visit the clinic once a month.
+  </span>
+  <br/>
+  （３）　多くのマラソン大会では５ｋｍ
+  <span class="bold">
+   おきに
+  </span>
+  給水ポイントが設けられている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_559_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   很多马拉松大会设计每隔5千米设置一个供水站。
+  </span>
+  <br/>
+  <span class="gray">
+   In many marathon races, water stations are set up every 5 kilometers.
+  </span>
+  <br/>
+  （４）　５メートル
+  <span class="bold">
+   おきに
+  </span>
+  植樹する。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_559_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   每隔5米种一棵树。
+  </span>
+  <br/>
+  <span class="gray">
+   Plant trees at intervals of 5 meters.
+  </span>
+  <br/>
+  （５）　駅へ向かうバスは１５分
+  <span class="bold">
+   おきに
+  </span>
+  出ている。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_559_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   去车站的公共汽车每15分钟出发一次。
+  </span>
+  <br/>
+  <span class="gray">
+   Buses to the station depart every 15 minutes.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  「～ごとに」と似ているので注意。
+  <br/>
+  １日おきに：●〇●〇●〇●〇
+  <br/>
+  １日ごとに：●●●●●●●●
+ </p>
+ <p>
+  ２日おきに：●〇〇●〇〇●〇
+  <br/>
+  ２日ごとに：●〇●〇●〇●〇
+ </p>
+ <p>
+  ただし例外があります。小さい数字に「秒」「分」がついたり、短い距離を表したりするときは、「隔〇」という意味になりません。（なりにくいです）
+ </p>
+ <p>
+  ５秒おきに：●●●●●●●●●
+  <br/>
+  ５秒ごとに：●●●●●●●●●
+ </p>
+ <p>
+  １ｋｍおきに：●●●●●●●●●
+  <br/>
+  １ｋｍごとに：●●●●●●●●●
+ </p>
+ <p>
+  「１時間おきに」などは、長い時間とも短い時間とも言えない中間的な位置にあるので、「●〇●〇●〇●〇」と思う人もいれば、「●●●●●●●●●」と思う人もいます。複数の解釈ができますので、コミュニケーションにおいては言い方を変えるなど工夫が必要です。
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

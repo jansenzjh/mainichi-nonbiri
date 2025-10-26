@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n1-toshitakotoga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n1-toshitearumajiki.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n1-tomonaruto.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋としたことが
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  像…那样的人，（竟然）…
+  <br/>
+  作为…却…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  前項には人物を表す名詞が来て、後項ではその人が普段しないような失敗などの行動、そしてそれに対する驚きなどの感情を述べます。比較的身近な人物について述べることが多いです。
+  <br/>
+  話者のその人物に対する評価はもともと高いからこそ、その人物がしてしまった意外な失敗に対する驚きのニュアンスを含みます。
+ </p>
+ <p>
+  既に発生したことにのみ使え、後ろにはよく「とは」や「なんて」と呼応します。更に「とは」「なんて」の後ろでは驚きなどの感想を述べますが、この部分は省略することができます。
+ </p>
+ <p>
+  慣用句として「私としたことが」という言い方があります。
+  <br/>
+  いつもは失敗しない私が不注意から失敗してしまったことを意外だとして述べる言い方で、皮肉や謙遜にも使え、言い方によっては傲慢で偉そうな印象を与えることもあります。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　いつも成績の良い彼女
+  <span class="bold">
+   としたことが
+  </span>
+  、大学入試に落ちるとは驚きだ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_218_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   学习成绩一直很好的她，竟然在高考的时候失误了，真是让人吃惊。
+  </span>
+  <br/>
+  <span class="gray">
+   It’s surprising that she, who always has good grades, failed the university entrance exam.
+  </span>
+  <br/>
+  （２）　いつも慎重な彼
+  <span class="bold">
+   としたことが
+  </span>
+  このような失敗をするとは。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_218_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   一直很谨慎的他竟然也会失败。
+  </span>
+  <br/>
+  <span class="gray">
+   It’s surprising that he, who is always cautious, made such a mistake.
+  </span>
+  <br/>
+  （３）　私
+  <span class="bold">
+   としたことが
+  </span>
+  、こんな大きなミスをするなんて。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_218_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我竟然会犯下如此大错。
+  </span>
+  <br/>
+  <span class="gray">
+   I can’t believe that I, of all people, made such a big mistake.
+  </span>
+  <br/>
+  （４）　百戦錬磨の彼
+  <span class="bold">
+   としたことが
+  </span>
+  、うっかりして形勢を損ねてしまうとは珍しい。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_218_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   身经百炼的他竟然会看不清形势而遭受损失，真是少见。
+  </span>
+  <br/>
+  <span class="gray">
+   It’s unusual that he, with his extensive experience, carelessly jeopardized the situation.
+  </span>
+  <br/>
+  （５）　業績も人柄も良い彼
+  <span class="bold">
+   としたことが
+  </span>
+  、今回の件ですっかり信用を失ってしまった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_218_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   业绩和人品都好的他，竟然在这次事情中丧失了所有信用。
+  </span>
+  <br/>
+  <span class="gray">
+   It’s unfortunate that he, who had both good performance and a good character, has completely lost trust due to this incident.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n1-tarumono/">
+   【Ｎ１文法】～たるもの／～たる～／～たるに
+  </a>
+  <br/>
+  <a href="https://mainichi-nonbiri.com/grammar/n1-tomoaroumonoga/">
+   【Ｎ１文法】～ともあろうものが
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

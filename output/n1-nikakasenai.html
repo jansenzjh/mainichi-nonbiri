@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n1-nikakasenai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n1-nikakawaru.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n1-nikagiranai.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋に欠かせない
+  <br/>
+  名詞＋が欠かせない
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  在…方面不可或缺的（～に欠かせない）
+  <br/>
+  必不可少的（～が欠かせない）
+  <br/>
+  ～には無くてはならない
+  <br/>
+  ～には絶対必要
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  条件や量などが不足すると成立しない、つまり絶対になくてはならないことを表します。
+  <br/>
+  「～にとってなくてはならない」「～になくてはならない」に言い換えることができます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  <img alt="" class="aligncenter size-full wp-image-65937 lazyload" data-aspectratio="800/450" data-src="https://mainichi-nonbiri.com/wp-content/uploads/2018/11/I2_006.jpg" data-srcset="https://mainichi-nonbiri.com/wp-content/uploads/2018/11/I2_006.jpg 800w, https://mainichi-nonbiri.com/wp-content/uploads/2018/11/I2_006-300x169.jpg 300w, https://mainichi-nonbiri.com/wp-content/uploads/2018/11/I2_006-768x432.jpg 768w" decoding="async" height="450" sizes="(max-width: 800px) 100vw, 800px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800"/>
+  <noscript>
+   <img alt="" class="aligncenter size-full wp-image-65937" decoding="async" height="450" sizes="(max-width: 800px) 100vw, 800px" src="https://mainichi-nonbiri.com/wp-content/uploads/2018/11/I2_006.jpg" srcset="https://mainichi-nonbiri.com/wp-content/uploads/2018/11/I2_006.jpg 800w, https://mainichi-nonbiri.com/wp-content/uploads/2018/11/I2_006-300x169.jpg 300w, https://mainichi-nonbiri.com/wp-content/uploads/2018/11/I2_006-768x432.jpg 768w" width="800"/>
+  </noscript>
+ </p>
+ <p>
+  （１）　この年になると晩酌
+  <span class="bold">
+   が欠かせない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_281_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   到了这把年纪，少不了在吃晚饭的时候喝上一杯。
+  </span>
+  <br/>
+  <span class="gray">
+   At this age, a nightly drink is indispensable.
+  </span>
+  <br/>
+  （２）　ケーキはクリスマスを過ごすの
+  <span class="bold">
+   に欠かせない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_281_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   过圣诞节的时候蛋糕必不可少。
+  </span>
+  <br/>
+  <span class="gray">
+   Cake is essential for spending Christmas.
+  </span>
+  <br/>
+  （３）　カイロ
+  <span class="bold">
+   が欠かせない
+  </span>
+  季節になった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_281_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   到了必须用怀炉的季节了。
+  </span>
+  <br/>
+  <span class="gray">
+   It has become a season where hand warmers are indispensable.
+  </span>
+  <br/>
+  （４）　たんぱく質は筋肉を作るの
+  <span class="bold">
+   に欠かせない
+  </span>
+  ものだ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_281_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   蛋白质对锻炼肌肉必不可少。
+  </span>
+  <br/>
+  <span class="gray">
+   Protein is essential for building muscles.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

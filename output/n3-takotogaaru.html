@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-takotogaaru</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-takotoninaru.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-takirinai.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動詞た形＋たことがある
+  <br/>
+  動詞た形＋たことがない
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  （曾经）…过
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  動詞の過去形に接続して、過去の経験や既に発生したことを表します。
+  <br/>
+  否定形は「～たことがない／～たことがありません」です。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　泥酔して倒れ
+  <span class="bold">
+   たことがある
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_605_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   醉到不省人事的时候也有。
+  </span>
+  <br/>
+  <span class="gray">
+   I have once passed out from being heavily intoxicated.
+  </span>
+  <br/>
+  （２）　２年前に交通事故を起こして入院し
+  <span class="bold">
+   たことがある
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_605_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   2年前因为交通事故住过院。
+  </span>
+  <br/>
+  <span class="gray">
+   Two years ago, I had a traffic accident and was hospitalized.
+  </span>
+  <br/>
+  （３）　一度も告白され
+  <span class="bold">
+   たことがない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_605_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   从来没有被告白过。
+  </span>
+  <br/>
+  <span class="gray">
+   I have never been confessed to.
+  </span>
+  <br/>
+  （４）　見たことも聞い
+  <span class="bold">
+   たこともありません
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_605_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   见所未见闻所未闻。
+  </span>
+  <br/>
+  <span class="gray">
+   I have neither seen nor heard about it.
+  </span>
+  <br/>
+  （５）　夜中に一度も目覚めずぐっすり寝られ
+  <span class="bold">
+   たことがない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_605_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   夜里没有一觉睡到自然醒过。
+  </span>
+  <br/>
+  <span class="gray">
+   I have never slept through the night without waking up even once.
+  </span>
+  <br/>
+  （６）　まだ人を好きになっ
+  <span class="bold">
+   たことがない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_605_06.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   还没有喜欢过谁。
+  </span>
+  <br/>
+  <span class="gray">
+   I have yet to develop feelings for someone.
+  </span>
+  <br/>
+  （７）　近くに新しい店ができたらしいが、結局まだ食べに行け
+  <span class="bold">
+   たことがない
+  </span>
+  。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_605_07.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   虽然附近新开了一家店，结果还没有去尝过。
+  </span>
+  <br/>
+  <span class="gray">
+   It seems a new restaurant has opened nearby, but I still haven’t had the chance to go and eat there.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-kotogaaru/">
+   【Ｎ３文法】～ことがある／こともある
+  </a>
+  」
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n0-shiburu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n0-shihasuru.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n0-sasuga.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動ます形＋渋る
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  舍不得…
+  <br/>
+  不肯…
+  <br/>
+  不情愿…
+  <br/>
+  不痛快…
+  <br/>
+  不爽快…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  動ます形に接続して、躊躇している様子を表します。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　銀行が大規模な不良債権を抱え融資に慎重となり、中小企業に対して貸し
+  <span class="bold">
+   渋って
+  </span>
+  いる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_022_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   银行因背有大规模不良债权对企业融资的事情非常谨慎，这让中小企业的贷款十分艰难。
+  </span>
+  <br/>
+  <span class="gray">
+   Due to the bank’s large-scale bad loans, they have become cautious in lending and are being reluctant to provide loans to small and medium-sized enterprises.
+  </span>
+  <br/>
+  （２）　たった数千円くらい、出し
+  <span class="bold">
+   渋ら
+  </span>
+  ないでよ。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_022_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   只是几千日元而已，交出来不难吧。
+  </span>
+  <br/>
+  <span class="gray">
+   It’s just a few thousand yen, don’t be stingy.
+  </span>
+  <br/>
+  （３）　値段が高かろうと重要なプレゼントは買い
+  <span class="bold">
+   渋る
+  </span>
+  べきではない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_022_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   价格贵但是重要的礼物买起来不用犹豫。
+  </span>
+  <br/>
+  <span class="gray">
+   Regardless of the high price, important gifts should not be scrimped on.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

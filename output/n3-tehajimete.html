@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-tehajimete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-tehoshii.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-tegoran.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動て形＋はじめて
+  <br/>
+  動て形＋みてはじめて
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  …以后，才…
+  <br/>
+  在…之后才…
+  <br/>
+  ～してからやっと～する
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  前項には何らかの経験を述べ、後項ではその経験を通してようやく気付いたことや、今まで注意していなかったことに気付いたことを述べます。
+  <br/>
+  多くの場合、後項では「分かる」「知る」「できる」などの動詞が用いられます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　今まで好きっていう感情がよく分からなかったけど、彼に出会え
+  <span class="bold">
+   てはじめて
+  </span>
+  分かったような気がする。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_630_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   至今为止不知道喜欢是一种什么感觉，但是跟他相遇之后开始明白了。
+  </span>
+  <br/>
+  <span class="gray">
+   Until now, I often didn’t understand the feeling of love, but after meeting him, I feel like I finally understood it for the first time.
+  </span>
+  <br/>
+  （２）　指摘され
+  <span class="bold">
+   てはじめて
+  </span>
+  間違いに気づいた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_630_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   被指出之后才注意到错误。
+  </span>
+  <br/>
+  <span class="gray">
+   It was only when I was pointed out that I noticed the mistake.
+  </span>
+  <br/>
+  （３）　実家を離れ
+  <span class="bold">
+   てはじめて
+  </span>
+  親のありがたみを知った。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_630_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   离家之后才知父母之恩。
+  </span>
+  <br/>
+  <span class="gray">
+   It was only after leaving my parents’ house that I truly appreciated their kindness.
+  </span>
+  <br/>
+  （４）　子育ての大変さって、やっ
+  <span class="bold">
+   てみてはじめて
+  </span>
+  わかる。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_630_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   养育孩子的辛苦自己试了才知道。
+  </span>
+  <br/>
+  <span class="gray">
+   The difficulty of raising children is something you only realize once you try it yourself.
+  </span>
+  <br/>
+  （５）　飼っ
+  <span class="bold">
+   てみてはじめて
+  </span>
+  自分が猫アレルギーだと気づいた。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_630_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   养猫之后才知道自己对猫过敏。
+  </span>
+  <br/>
+  <span class="gray">
+   It was only after having one as a pet that I realized I’m allergic to cats.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  この文法とは関係ないけど…
+  <br/>
+  <br/>
+  （６）　日本に来
+  <span class="bold">
+   てはじめて
+  </span>
+  本物のお寿司を食べた。
+  <br/>
+  <span class="gray">
+   来日本后，我第一次尝到了真正的寿司。
+  </span>
+  <br/>
+  <span class="gray">
+   I had real sushi for the first time after coming to Japan.
+  </span>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

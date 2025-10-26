@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-yoi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-youdemoari.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-yarayara.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  動ます形＋よい
+  <br/>
+  動ます形＋いい
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  容易…
+  <br/>
+  易于…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  <span class="pinkline">
+   気分の良い状態
+  </span>
+  で動作が遂行できること、実現の簡単さを表します。
+ </p>
+ <p>
+  「踊りよい」「書きよい」「住みよい」「喋りいい」「やりいい」「解りいい」「飲みよい」「分かりいい」「学びいい」などの言い方がありましたが、現代ではほとんど使用されなくなっています。現代でも一般的に用いられているのは「住みよい」だけとなっています。
+ </p>
+ <p>
+  同じ意味を持つものに「～やすい」があります。動作の簡単さを表す場合はこちらを使う方が圧倒的に多くなっています。
+ </p>
+ <p>
+  「住みやすい」と「住みよい」では、「住みよい」のほうが気持ちよさを表現できるので、各自治体・市町村の広報などではこちらのほうが使われやすい傾向があります。
+  <br/>
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  （１）　住み
+  <span class="bold">
+   よい
+  </span>
+  街づくりを進めるため、計画的な都市整備を行っていきます。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_721_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   为了打造舒适城市，正在有计划地实施城市系统化建设。
+  </span>
+  <br/>
+  <span class="gray">
+   We will proceed with planned urban development to promote the creation of a livable city.
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  特になし
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>

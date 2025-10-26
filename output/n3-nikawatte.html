@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n3-nikawatte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="n3-nikurabete.html">Previous</a>
+            <a href="index.html">Index</a>
+            <a href="n3-nikanshite.html">Next</a>
+            <button id="mark-learning">Mark as Learning</button>
+            <button id="clear-marker">Clear Marker</button>
+            <button id="go-marker">Go to Marker</button>
+        </div>
+        <div class="post_content">
+ <h3>
+  接続
+ </h3>
+ <p>
+  名詞＋に代わって
+  <br/>
+  名詞＋に代わり
+ </p>
+ <h3>
+  意味
+ </h3>
+ <p>
+  代替…
+ </p>
+ <h3>
+  解説
+ </h3>
+ <p>
+  誰かの代わりに何かをすることを表します。
+  <br/>
+  通常は人物を表す名詞に接続されます。
+ </p>
+ <h3>
+  例文
+ </h3>
+ <p>
+  <img alt="" class="aligncenter size-full wp-image-65854 lazyload" data-aspectratio="800/450" data-src="https://mainichi-nonbiri.com/wp-content/uploads/2019/03/I1_025-1.jpg" data-srcset="https://mainichi-nonbiri.com/wp-content/uploads/2019/03/I1_025-1.jpg 800w, https://mainichi-nonbiri.com/wp-content/uploads/2019/03/I1_025-1-300x169.jpg 300w, https://mainichi-nonbiri.com/wp-content/uploads/2019/03/I1_025-1-768x432.jpg 768w" decoding="async" height="450" sizes="(max-width: 800px) 100vw, 800px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800"/>
+  <noscript>
+   <img alt="" class="aligncenter size-full wp-image-65854" decoding="async" height="450" sizes="(max-width: 800px) 100vw, 800px" src="https://mainichi-nonbiri.com/wp-content/uploads/2019/03/I1_025-1.jpg" srcset="https://mainichi-nonbiri.com/wp-content/uploads/2019/03/I1_025-1.jpg 800w, https://mainichi-nonbiri.com/wp-content/uploads/2019/03/I1_025-1-300x169.jpg 300w, https://mainichi-nonbiri.com/wp-content/uploads/2019/03/I1_025-1-768x432.jpg 768w" width="800"/>
+  </noscript>
+ </p>
+ <p>
+  （１）　課長
+  <span class="bold">
+   に代わって
+  </span>
+  私が会議に出席します。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_677_01.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我代替科长出席会议。
+  </span>
+  <br/>
+  <span class="gray">
+   I will attend the meeting in place of the section chief.
+  </span>
+  <br/>
+  （２）　後輩
+  <span class="bold">
+   に代わって
+  </span>
+  尻拭いをするはめになった。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_677_02.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我被迫代替后辈收拾烂摊子。
+  </span>
+  <br/>
+  <span class="gray">
+   I ended up cleaning up the mess in place of my junior colleague.
+  </span>
+  <br/>
+  （３）　この仕事について、彼
+  <span class="bold">
+   に代わる
+  </span>
+  人はいない。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_677_03.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   关于这项工作，没有人能代替他。
+  </span>
+  <br/>
+  <span class="gray">
+   There is no one to replace him for this job.
+  </span>
+  <br/>
+  （４）　亡くなった母
+  <span class="bold">
+   に代わり
+  </span>
+  、私が弟の面倒を見る。
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_677_04.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我代替已去世的母亲照顾弟弟。
+  </span>
+  <br/>
+  <span class="gray">
+   In place of our late mother, I will take care of my younger brother.
+  </span>
+  <br/>
+  （５）　「月
+  <span class="bold">
+   に代わって
+  </span>
+  おしおきよ」
+  <audio controls="" src="https://mainichi-nonbiri.com/mp3files/grammarmp3/JP_Grammer_677_05.mp3">
+  </audio>
+  <br/>
+  <span class="gray">
+   我要代表月亮消灭你。
+  </span>
+  <br/>
+  <span class="gray">
+   “Punishment on behalf of the moon”
+  </span>
+ </p>
+ <h3>
+  備考
+ </h3>
+ <p>
+  <a href="https://mainichi-nonbiri.com/grammar/n3-kawarini/">
+   【Ｎ３文法】～代わりに（かわりに）
+  </a>
+ </p>
+</div>
+
+    </div>
+    <script>
+        document.getElementById('mark-learning').addEventListener('click', () => {
+            localStorage.setItem('learningMarker', window.location.href);
+            alert('Page marked as learning!');
+        });
+
+        document.getElementById('clear-marker').addEventListener('click', () => {
+            localStorage.removeItem('learningMarker');
+            alert('Marker cleared!');
+        });
+
+        document.getElementById('go-marker').addEventListener('click', () => {
+            const marker = localStorage.getItem('learningMarker');
+            if (marker) {
+                window.location.href = marker;
+            } else {
+                alert('No marker set!');
+            }
+        });
+    </script>
+</body>
+</html>
