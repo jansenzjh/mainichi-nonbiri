@@ -15,35 +15,38 @@ body {
 .nav {
     background-color: #CD2C58;
     padding: 10px;
-    text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav a {
+.nav-center {
+    display: flex;
+    gap: 10px;
+}
+
+.nav a,
+.nav button {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
-}
-
-.nav a:hover {
-    text-decoration: underline;
-}
-
-.nav button {
-    background-color: #E06B80;
-    color: white;
+    background: none;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    font-size: 1.2em;
 }
 
+.nav a:hover,
 .nav button:hover {
-    background-color: #FFC69D;
+    color: #FFC69D;
+}
+
+.nav a.disabled {
+    color: #E06B80;
+    cursor: not-allowed;
 }
 
 .post_content {
@@ -96,7 +99,7 @@ a:hover {
     .nav {
         padding: 8px;
     }
-    .nav a {
-        margin: 0 10px;
+    .nav-center {
+        gap: 5px;
     }
 }

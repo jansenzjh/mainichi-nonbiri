@@ -13,11 +13,12 @@ def fetch_content(url):
         response = requests.get(url)
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
+        title_h1 = soup.find('h1', class_='c-postTitle__ttl')
         content_div = soup.find('div', class_='post_content')
-        return content_div
+        return title_h1, content_div
     except requests.exceptions.RequestException as e:
         print(f"Error fetching {url}: {e}")
-        return None
+        return None, None
 
 def main():
     with open('links.txt', 'r') as f:
@@ -31,7 +32,7 @@ def main():
 
     for i, url in enumerate(urls):
         slug = slugs[i]
-        content_div = fetch_content(url)
+        title_h1, content_div = fetch_content(url)
 
         if content_div:
             for a_tag in content_div.find_all('a', class_='sounds'):
@@ -52,39 +53,29 @@ def main():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{slug}</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script defer src="https://umi.crazyhungry.party/script.js" data-website-id="515ea1ca-45c6-499c-b353-7f38a29336b1"></script>
 </head>
 <body>
     <div class="container">
         <div class="nav">
-            {'<a href="' + prev_slug + '.html">Previous</a>' if prev_slug else ''}
-            <a href="index.html">Index</a>
-            {'<a href="' + next_slug + '.html">Next</a>' if next_slug else ''}
-            <button id="mark-learning">Mark as Learning</button>
-            <button id="clear-marker">Clear Marker</button>
-            <button id="go-marker">Go to Marker</button>
+            <div class="nav-left">
+                {'<a href="' + prev_slug + '.html" title="Previous"><i class="fas fa-arrow-left"></i></a>' if prev_slug else '<a class="disabled"><i class="fas fa-arrow-left"></i></a>'}
+            </div>
+            <div class="nav-center">
+                <a href="index.html" title="Index"><i class="fas fa-list"></i></a>
+                <button id="mark-learning" title="Mark"><i class="fas fa-bookmark"></i></button>
+                <button id="go-marker" title="Go"><i class="fas fa-location-arrow"></i></button>
+                <button id="clear-marker" title="Clear"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="nav-right">
+                {'<a href="' + next_slug + '.html" title="Next"><i class="fas fa-arrow-right"></i></a>' if next_slug else '<a class="disabled"><i class="fas fa-arrow-right"></i></a>'}
+            </div>
         </div>
+        {title_h1.prettify() if title_h1 else ''}
         {content_div.prettify()}
     </div>
-    <script>
-        document.getElementById('mark-learning').addEventListener('click', () => {{
-            localStorage.setItem('learningMarker', window.location.href);
-            alert('Page marked as learning!');
-        }});
-
-        document.getElementById('clear-marker').addEventListener('click', () => {{
-            localStorage.removeItem('learningMarker');
-            alert('Marker cleared!');
-        }});
-
-        document.getElementById('go-marker').addEventListener('click', () => {{
-            const marker = localStorage.getItem('learningMarker');
-            if (marker) {{
-                window.location.href = marker;
-            }} else {{
-                alert('No marker set!');
-            }}
-        }});
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 """
