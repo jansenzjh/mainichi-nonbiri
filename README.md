@@ -2,6 +2,10 @@
 
 This project consists of a Python script that fetches content from a list of URLs, extracts specific parts of the HTML, and generates a set of static HTML pages. The generated pages are styled, mobile-friendly, and include navigation and other features.
 
+## Live Demo
+
+You can access the generated pages on GitHub Pages: [https://jansenzjh.github.io/mainichi-nonbiri/output/](https://jansenzjh.github.io/mainichi-nonbiri/output/)
+
 ## Features
 
 - **Static Site Generation**: Creates HTML pages from a list of URLs in `links.txt`.
